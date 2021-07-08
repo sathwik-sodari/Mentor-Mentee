@@ -1,6 +1,7 @@
 {
   "name": "cfg",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,6 +20,12 @@
     "@angular/platform-browser": "~11.2.12",
     "@angular/platform-browser-dynamic": "~11.2.12",
     "@angular/router": "~11.2.12",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "json-server": "^0.16.3",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

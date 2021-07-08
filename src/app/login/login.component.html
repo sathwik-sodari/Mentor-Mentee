@@ -7,19 +7,26 @@
                     <h2>Log In</h2>
                 </div>
                 <div class="row">
-                    <form control="" class="form-group">
+
+                    <form class="form-group" #myref="ngForm" (ngSubmit)="onSubmit(myref.value)">
+
                         <div class="row">
-                            <input type="text" name="username" id="username" class="form__input" placeholder="Username">
+
+                            <input type="text" name="username" id="username" class="form__input" placeholder="Username" ngModel>
                         </div>
+                        
                         <div class="row">
                             <!-- <span class="fa fa-lock"></span> -->
-                            <input type="password" name="password" id="password" class="form__input" placeholder="Password">
+                            <input type="password" name="password" id="password" class="form__input" placeholder="Password" ngModel>
                         </div>
                        
                         <div class="row d-inline mx-auto">
-                            <input type="submit" value="Submit" class="btn">
+                            
+                            <button type="submit" class="btn">Submit</button>
+
                         </div>
                     </form>
+
                 </div>
                 <div class="row">
                     <p>Don't have an account? <a href="#">Register Here</a></p>
