@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { UserService } from '../user.service';
+
+import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'app-login',
@@ -8,7 +12,9 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private us : UserService) { }
+
+  constructor(private us : UserService, private router:Router) { }
+
 
   ngOnInit(): void {
   }
@@ -16,10 +22,16 @@ export class LoginComponent implements OnInit {
   onSubmit(data){
     console.log(data)
     this.us.userLogin(data)
+  }
+
+
+
+  /**
+   * MoveToRegister
+   */
+  public MoveToRegister() {
+    this.router.navigateByUrl('/register')
     
-
-
-
   }
 
 }
