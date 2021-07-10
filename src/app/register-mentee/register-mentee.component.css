@@ -1,7 +1,5 @@
-
-
 .main-content{
-	width: 50%;
+	width: 60%;
 	border-radius: 20px;
 	/* box-shadow: 0 5px 5px rgba(0,0,0,.4); */
 	margin: 5em auto;
@@ -19,7 +17,7 @@
 	font-size:3em;
 }
 @media screen and (max-width: 640px) {
-	.main-content{width: 95%;}
+	.main-content{width: 90%;}
 	.company__info{
 		display: none;
 	}
@@ -97,3 +95,7 @@ form{
     border: none;
 }
 
+label{
+    margin:1rem;
+    text-align: left !important;
+}

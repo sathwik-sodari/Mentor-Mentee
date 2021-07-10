@@ -1,44 +1,6 @@
-<div class="container-fluid mt-1 pt-3 login">
-    <div class="row main-content  text-center">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 col-xs-12 col-sm-12 login_form shadow-lg ">
-            <div class="container-fluid">
-                <div class="row mt-5">
-                    <h2>Create Account</h2>
-                </div>
-                <div class="row">
-                    <form class="form-group" #myref="ngForm" (ngSubmit)="onSubmit(myref.value)">
-                       
-                        <div class="row">
-                            <input type="text" name="firstname" id="firstname" class="form__input" placeholder="First Name" ngModel>
-                        </div>
-                        <div class="row">
-                            <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name" ngModel>
-                        </div>
-                        <div class="row">
-                            <input type="email" name="emailid" id="emailid" class="form__input" placeholder="Email address" ngModel>
-                        </div>
-
-                        <div class="row">
-                            <input type="text" name="username" id="username" class="form__input" placeholder="Username" ngModel>
-                        </div>
-
-                        <div class="row">
-                            <!-- <span class="fa fa-lock"></span> -->
-                            <input type="password" name="password" id="password" class="form__input" placeholder="Password" ngModel> 
-                        </div>
-                       
-                        <div class="row d-inline mx-auto">
-                            <button type="submit" class="btn">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="row">
-                    <p>Sign in? <button class="btn btn-link btn-outline-light" (click)=MoveToLogin()>Click Here</button></p>
-                </div>
-            
-            </div>
-            <div class="col-md-2"></div>
-        </div>
+<div class="container-fluid pt-5 mt-5">
+    <div > 
+    <button class="btn btnsub p-3 w-50 d-block mx-auto" (click)=MoveToMentor()>Register as Mentor</button>
+    <button class="btn btnsub p-3  w-50 d-block mx-auto" (click)=MoveToMentee()>Register as Mentee</button>
     </div>
 </div>

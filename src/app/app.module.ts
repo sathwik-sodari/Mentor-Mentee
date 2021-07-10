@@ -11,7 +11,9 @@ import { HomeComponent } from './home/home.component';
 
 import { FormsModule } from '@angular/forms';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { RegisterMenteeComponent } from './register-mentee/register-mentee.component';
+import { RegisterMentorComponent } from './register-mentor/register-mentor.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {HttpClientModule} from '@angular/common/http'
     RegistrationComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterMenteeComponent,
+    RegisterMentorComponent
   ],
   imports: [
     BrowserModule,

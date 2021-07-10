@@ -43,4 +43,17 @@ export class RegistrationComponent implements OnInit {
     
   }
 
+  /**
+   * moveToMentor
+   */
+  public MoveToMentor() {
+    this.router.navigateByUrl('/register-mentor')
+    
+  }
+
+  public MoveToMentee() {
+    this.router.navigateByUrl('register-mentee')
+    
+  }
+
 }
