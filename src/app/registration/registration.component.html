@@ -7,26 +7,29 @@
                     <h2>Create Account</h2>
                 </div>
                 <div class="row">
-                    <form control="" class="form-group">
+                    <form class="form-group" #myref="ngForm" (ngSubmit)="onSubmit(myref.value)">
+                       
                         <div class="row">
-                            <input type="text" name="username" id="username" class="form__input" placeholder="Username">
+                            <input type="text" name="firstname" id="firstname" class="form__input" placeholder="First Name" ngModel>
                         </div>
                         <div class="row">
-                            <input type="text" name="firstname" id="firstname" class="form__input" placeholder="First Name">
+                            <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name" ngModel>
                         </div>
                         <div class="row">
-                            <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name">
+                            <input type="email" name="emailid" id="emailid" class="form__input" placeholder="Email address" ngModel>
                         </div>
+
                         <div class="row">
-                            <input type="email" name="emailid" id="emailid" class="form__input" placeholder="Email address">
+                            <input type="text" name="username" id="username" class="form__input" placeholder="Username" ngModel>
                         </div>
+
                         <div class="row">
                             <!-- <span class="fa fa-lock"></span> -->
-                            <input type="password" name="password" id="password" class="form__input" placeholder="Password">
+                            <input type="password" name="password" id="password" class="form__input" placeholder="Password" ngModel> 
                         </div>
                        
                         <div class="row d-inline mx-auto">
-                            <input type="submit" value="Register" class="btn btnsub">
+                            <button type="submit" class="btn">Submit</button>
                         </div>
                     </form>
                 </div>

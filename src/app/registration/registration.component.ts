@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-registration',
@@ -8,15 +9,35 @@ import {Router} from '@angular/router'
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private us: UserService) { }
 
   ngOnInit(): void {
   }
 
-  /**
-   * MoveToLogin
+
+
+    onSubmit(data){
+      
+      console.log(data)
+      this.us.userRegister(data).subscribe(res=>{
+        if(res.message === "user creation successfull")
+        {
+          alert("user creation succesfull")
+        }
+
+        else{
+          alert(`res is ${res.message}`)
+        }
+      }),err=>{
+        console.log("err in registration",err)
+      }
+
+    }
+
+
+    // MoveToLogin
    
-  */
+ 
   public MoveToLogin() {
     this.router.navigateByUrl('/login')
     

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,15 @@ export class UserService {
     
   }
 
- userLogin(data)
+ userRegister(data) : Observable <any>
  {
-   this.hc.post('/api/users/register',data).subscribe(data=>{
-     console.log(data),
-     err=>console.log(err)
-   })
+   return this.hc.post('/api/users/register',data);
    
  }
+
+ userLogin(data): Observable <any>
+ {
+   return this.hc.post('/api/users/signin',data)
+ }
+ 
 }

@@ -21,7 +21,21 @@ export class LoginComponent implements OnInit {
 
   onSubmit(data){
     console.log(data)
-    this.us.userLogin(data)
+    this.us.userLogin(data).subscribe(res=>{
+      if(res.message==="login success")
+      {
+        alert(`${res.message}`)
+        localStorage.setItem("userObj",JSON.stringify(res.userObj));
+        localStorage.setItem("token",res.token)
+      }
+      else{
+        alert(`${res.message}`)
+      }
+    },
+    err=>{
+      alert("login error");
+      console.log("login err",err)
+    })
   }
 
 
