@@ -53,4 +53,6 @@ export class ListService {
     return this.hc.get(`/api/applicants/accept/${id}`)
   }
 
+  cancelService
+
 }

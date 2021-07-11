@@ -233,7 +233,7 @@ userRouter.put(
   );
 
 
-  userRouter.get('/cancel/:id',isAuth,expressAsyncHandler(async (req, res) =>{
+  userRouter.get('/cancel/:id',expressAsyncHandler(async (req, res) =>{
     const user=await User.findById(req.params.id)
     const mentorId=user.mentor
     const mentor=await Mentor.findById(mentorId)

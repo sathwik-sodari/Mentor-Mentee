@@ -53,6 +53,11 @@ export class MenteeDetailsComponent implements OnInit {
 
         })
       }
+
+      // cancel(mentor)
+      // {
+      //   this.ls.cancelMentor()
+      // }
     
 
 // /choose/:id
