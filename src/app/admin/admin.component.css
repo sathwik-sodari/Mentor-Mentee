@@ -1,0 +1,15 @@
+
+
+.nav-link{
+    background-color: lightcoral;
+    font-weight: bold;
+    
+}
+
+a{
+    color :black;
+}
+
+ul{
+    justify-content: space-around;
+}

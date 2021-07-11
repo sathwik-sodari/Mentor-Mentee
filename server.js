@@ -10,24 +10,19 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// const express = require('express')
-// const mongoose = require('mongoose')
-// const userRouter = require('./Routers/userRouter.js')
-// const dotenv = require('dotenv')
 
+
+import applicantRouter from './Routers/applicantRouter.js';
+import mentorRouter from './Routers/mentorRouter.js';
 dotenv.config();
 
-// const path = require('path')
-// const exp = require('express')
 const app = express();
-// const exp = require('express')
-// const exp1 = exp()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname,'./dist/cfg/')))
 
-mongoose.connect('mongodb://localhost/cfgdemo76', {
+mongoose.connect(process.env.mongo_url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -38,6 +33,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/users', userRouter);
+app.use('/api/mentors', mentorRouter);
+app.use('/api/applicants', applicantRouter);
 
 app.use((err, req, res, next) => {
     res.status(500).send({message: err.message});

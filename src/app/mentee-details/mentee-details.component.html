@@ -1,0 +1,100 @@
+<p>mentee-details works!</p>
+
+
+<button type="button" class="btn btn-primary" (click)="getMentorsButton()">Show Mentors</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Career</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">E-Mail</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let mentor of mentors">
+
+        <th scope="row">{{mentor.name}}</th>
+        <td>{{mentor.career}}</td>
+        <td>{{mentor.phoneNumber}}</td>
+        <td>{{mentor.email}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="selectMentor(mentor)">Select</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<!-- new mentor -->
+
+  <table class="table" *ngIf="assigned">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+
+        <th scope="row">{{newMentor.name}}</th>
+        <td>{{newMentor.career}}</td>
+        <td>{{newMentor.phoneNumber}}</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<!-- 
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+  <!-- career: "medical"
+city: "Patiala"
+createdAt: "2021-07-10T12:28:57.501Z"
+email: "mentor3@gmail.com"
+firstLang: "hindi"
+fulladdress: "a-2 , efewnf effr rfgerg rf erwee"
+gender: "male"
+isAdmin: false
+mentee: null
+name: "rachimentor"
+password: "$2a$08$5QDCGp8Yo0NZ5WK0U2uGMuVI9woms/BftX.k1i9JJNyUyrFQ4sG12"
+phoneNumber: "1234567890"
+pincode: "400092"
+qualification: "+1"
+secondLang: "french"
+state: "Punjab" -->

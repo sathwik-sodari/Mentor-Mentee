@@ -1,0 +1,23 @@
+<p>mentee-list works!</p>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Career</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">E-Mail</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let mentee of mentees">
+
+        <th scope="row">{{mentee.name}}</th>
+        <td>{{mentee.careerPref}}</td>
+        <td>{{mentee.phoneNumber}}</td>
+        <td>{{mentee.email}}</td>
+      </tr>
+    </tbody>
+  </table>

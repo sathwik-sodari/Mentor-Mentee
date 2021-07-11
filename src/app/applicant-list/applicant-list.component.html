@@ -1,0 +1,27 @@
+<p>applicant-list works!</p>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Career</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">E-Mail</th>
+        <th scope="col">Approve</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let applicant of applicants">
+
+        <th scope="row">{{applicant.name}}</th>
+        <td>{{applicant.career}}</td>
+        <td>{{applicant.phoneNumber}}</td>
+        <td>{{applicant.email}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="approve(applicant)" *ngIf="status">Approve</button>
+            <!-- <span *ngIf="!status"> <h5>approval done</h5></span></td> -->
+      </tr>
+    </tbody>
+  </table>
+

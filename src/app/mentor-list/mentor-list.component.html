@@ -1,0 +1,25 @@
+<p>mentor-list works!</p>
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Career</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">E-Mail</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let mentor of mentors">
+
+        <th scope="row">{{mentor.name}}</th>
+        <td>{{mentor.careerPref}}</td>
+        <td>{{mentor.phoneNumber}}</td>
+        <td>{{mentor.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+

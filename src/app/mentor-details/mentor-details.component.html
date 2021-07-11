@@ -1,0 +1,28 @@
+<p>mentor-details works!</p>
+
+
+<div class="row d-inline mx-auto">
+                            
+    <button type="submit" class="btn btnsub" (click)="getMentee()">show mentee</button>
+
+</div>
+
+<table class="table" *ngIf="!assigned">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">{{mentee.name}}</th>
+        <td>{{mentee.careerPref}}</td>
+        <td>{{mentee.phoneNumber}}</td>
+        <td>{{mentee.state}}</td>
+      </tr>
+    </tbody>
+  </table>
