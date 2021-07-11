@@ -13,7 +13,6 @@ export class RegisterMenteeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-<<<<<<< HEAD
 
 
 
@@ -54,12 +53,6 @@ export class RegisterMenteeComponent implements OnInit {
 
 
     this.us.userMenteeRegister(data).subscribe(res=>{
-=======
-  onSubmit(data){
-      
-    console.log(data)
-    this.us.userRegister(data).subscribe(res=>{
->>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8
       if(res.message === "user creation successfull")
       {
         alert("user creation succesfull")
@@ -84,7 +77,6 @@ public MoveToLogin() {
 }
 
 }
-<<<<<<< HEAD
 
 
 
@@ -92,5 +84,3 @@ public MoveToLogin() {
 
 
 
-=======
->>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8

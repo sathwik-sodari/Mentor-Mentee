@@ -12,7 +12,6 @@ export class RegisterMentorComponent implements OnInit {
 
   constructor(private router:Router,private us: UserService) { }
 
-<<<<<<< HEAD
 
 
 
@@ -39,20 +38,6 @@ export class RegisterMentorComponent implements OnInit {
 
       else{
         
-=======
-  ngOnInit(): void {
-  }
-  onSubmit(data){
-      
-    console.log(data)
-    this.us.userRegister(data).subscribe(res=>{
-      if(res.message === "user creation successfull")
-      {
-        alert("user creation succesfull")
-      }
-
-      else{
->>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8
         alert(`res is ${res.message}`)
       }
     }),err=>{

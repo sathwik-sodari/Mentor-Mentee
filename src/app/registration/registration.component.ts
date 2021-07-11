@@ -16,7 +16,6 @@ export class RegistrationComponent implements OnInit {
 
 
 
-<<<<<<< HEAD
     // onSubmit(data){
 
     //   // this.regObj.name=data.name;
@@ -39,41 +38,15 @@ export class RegistrationComponent implements OnInit {
     //   }
 
     // }
-=======
-    onSubmit(data){
-      
-      console.log(data)
-      this.us.userRegister(data).subscribe(res=>{
-        if(res.message === "user creation successfull")
-        {
-          alert("user creation succesfull")
-        }
-
-        else{
-          alert(`res is ${res.message}`)
-        }
-      }),err=>{
-        console.log("err in registration",err)
-      }
-
-    }
->>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8
 
 
     // MoveToLogin
    
  
-<<<<<<< HEAD
   // public MoveToLogin() {
   //   this.router.navigateByUrl('/login')
     
   // }
-=======
-  public MoveToLogin() {
-    this.router.navigateByUrl('/login')
-    
-  }
->>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8
 
   /**
    * moveToMentor

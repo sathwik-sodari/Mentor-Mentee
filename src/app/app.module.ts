@@ -16,8 +16,9 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule ,  HTTP_INTERCEPTORS} from '@angular/common/http';
 import { RegisterMenteeComponent } from './register-mentee/register-mentee.component';
 import { RegisterMentorComponent } from './register-mentor/register-mentor.component';
-import { MenteeDetailsComponent } from './mentee-details/mentee-details.component';
-import { MentorDetailsComponent } from './mentor-details/mentor-details.component';
+
+import { MenteeDetailsComponent} from './mentee-details/mentee-details.component'
+import {  MentorDetailsComponent } from './mentor-details/mentor-details.component';
 import { AdminComponent } from './admin/admin.component';
 import { MenteeListComponent } from './mentee-list/mentee-list.component';
 import { MentorListComponent } from './mentor-list/mentor-list.component';
