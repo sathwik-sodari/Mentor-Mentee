@@ -12,6 +12,7 @@ const __dirname = dirname(__filename);
 
 
 
+
 import applicantRouter from './Routers/applicantRouter.js';
 import mentorRouter from './Routers/mentorRouter.js';
 dotenv.config();
@@ -28,9 +29,9 @@ mongoose.connect(process.env.mongo_url, {
     useCreateIndex: true,
 });
 
-app.get('/', (req, res) => {
-    res.send('Server is ready');
-});
+// app.get('/', (req, res) => {
+//     res.send('Server is ready');
+// });
 
 app.use('/api/users', userRouter);
 app.use('/api/mentors', mentorRouter);

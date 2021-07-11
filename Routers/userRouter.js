@@ -55,6 +55,7 @@ userRouter.post('/signin', expressAsyncHandler (async(req, res) => {
 
 userRouter.post('/register', expressAsyncHandler (async(req, res) => {
     const user = new User ({
+<<<<<<< HEAD
         name: req.body.name,
         email: req.body.email,
         fulladdress: req.body.fulladdress,
@@ -69,6 +70,10 @@ userRouter.post('/register', expressAsyncHandler (async(req, res) => {
         secondLang: req.body.secondLang,
         genderPref: req.body.genderPref,
         isAdmin: req.body.isAdmin,
+=======
+        name: req.body.username, 
+        email: req.body.emailid, 
+>>>>>>> 155a5fda1f575a021265115ac3d28e861fc19aa8
         password: bcrypt.hashSync(req.body.password, 8),
     });
 
