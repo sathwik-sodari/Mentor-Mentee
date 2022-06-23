@@ -64,4 +64,10 @@ export class UserService {
  {
    return this.hc.get(`/api/mentors/getMentee/${m_id}`)
  }
+
+
+ mentorDetails(m_id):Observable<any>
+ {
+   return this.hc.get(`/api/mentors/getMentor/${m_id}`)
+ }
 }

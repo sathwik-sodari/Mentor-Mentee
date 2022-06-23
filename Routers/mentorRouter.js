@@ -22,6 +22,15 @@ mentorRouter.get(
   })
 );
 
+mentorRouter.get('/getMentor/:id', expressAsyncHandler(async(req, res) => {
+    const user = await Mentor.findById(req.params.id);
+    if(user){
+        res.send(user);
+    } else{
+        res.status(404).send({ message: 'User Not Found' });
+    }
+}));
+
 mentorRouter.post('/signin', expressAsyncHandler (async(req, res) => {
   const mentor = await Mentor.findOne({ email: req.body.email });
 

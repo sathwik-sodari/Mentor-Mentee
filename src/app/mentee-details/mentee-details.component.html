@@ -32,9 +32,10 @@
     <thead>
       <tr>
         <th scope="col">Name</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">career</th>
+        <th scope="col">Phone </th>
+        <th scope="col">email </th>
+        <th scope="col">msg </th>
       </tr>
     </thead>
 
@@ -44,11 +45,54 @@
         <th scope="row">{{newMentor.name}}</th>
         <td>{{newMentor.career}}</td>
         <td>{{newMentor.phoneNumber}}</td>
+        <td>{{newMentor.email}}</td>
+        <th><a href="https://wa.me/91{{newMentor.phoneNumber}}">Chat</a></th>
+        
         <!-- <button type="button" class="btn btn-primary" (click)="cancel(mentor)">cancel subscription</button> -->
       </tr>
     </tbody>
+
+    <tbody  *ngIf="showd">
+      <tr>
+
+        <th scope="row">{{user[name]}}</th>
+        <td>{{user.career}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.email}}</td>
+        
+        <!-- <button type="button" class="btn btn-primary" (click)="cancel(mentor)">cancel subscription</button> -->
+      </tr>
+    </tbody>
+
   </table>
 
+
+  <table class="table" *ngIf="showd">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">career</th>
+        <th scope="col">Phone </th>
+        <th scope="col">email </th>
+        <th scope="col">msg </th>
+        
+      </tr>
+    </thead>
+
+    <tbody >
+      <tr>
+
+        <th scope="row">{{user.name}}</th>
+        <td>{{user.career}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.email}}</td>
+        <th><a id="myid" href="https://wa.me/91{{user.phoneNumber}}">Chat</a></th>
+        <!-- <th><a id="myid" href="https://wa.me/919182216936">Chat</a></th> -->
+        <!-- <button type="button" class="btn btn-primary" (click)="cancel(mentor)">cancel subscription</button> -->
+      </tr>
+    </tbody>
+
+  </table>
 
 <!-- 
   <table class="table table-hover">
